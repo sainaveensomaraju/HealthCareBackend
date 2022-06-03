@@ -1,0 +1,13 @@
+com\example\bean\Admin.class
+com\example\service\AppointmentService.class
+com\example\bean\Pathology.class
+com\example\serviceImpl\AppointmentServiceImpl.class
+com\example\bean\Doctor.class
+com\example\bean\OutputResponse.class
+com\example\repository\AppointmentRepository.class
+com\example\bean\Appointment.class
+com\example\bean\Patient.class
+com\example\AppointmentApplication.class
+com\example\bean\InputAppointment.class
+com\example\bean\DiagnosticTest.class
+com\example\controller\AppointmentController.class
