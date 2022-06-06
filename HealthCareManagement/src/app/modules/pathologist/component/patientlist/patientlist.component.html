@@ -1,0 +1,32 @@
+<h1 class="text-center">PATIENTS ASSIGNED TO YOU</h1>
+<table class="table table-stripped table-bordered table-hovered styling" border="1">
+    <tr>
+        <th>Patient Name</th>
+        <th>Doctor Name</th>
+        <th>Lab center Name</th>
+        <th>Reason</th>
+        <th>AdmitDate</th>
+        <th>Admit By</th>
+        <!-- <th>salary</th>
+        <th>age</th>
+        <th>Address</th>
+        <th>Date Of Birth</th>
+        <th>password</th>
+        <th>Created date</th> -->
+    </tr>
+    <tr *ngFor="let d of allAppointments">
+   
+        <td><b>{{d.patientName}}</b></td>
+        <td><b>{{d.doctorName}}</b></td>
+       <td><i>{{d.PatologyCenterName}}</i></td>
+        <td>{{d.admitDate}}</td>
+        <td>{{d.admitBy}}</td>
+        <!-- <td>{{d.email}}</td>
+        <td>{{d.salary}}</td>
+        <td>{{d.age}}</td>
+        <td>{{d.address}}</td>
+        <td>{{d.dob}}</td>
+        <td>{{d.password}}</td>
+        <td>{{d.createdDate}}</td> -->
+    </tr>
+</table>

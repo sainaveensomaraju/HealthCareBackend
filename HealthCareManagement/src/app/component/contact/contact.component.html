@@ -1,0 +1,51 @@
+
+<app-header></app-header>
+<div class="body">
+<div class="head">
+    <img src="../../../assets/Images/HospitalLogo.png" alt="hospital.jpg" width="75px" height="75px">
+    <h2>Dhanvantari Hospital</h2>
+ </div>
+
+ <form th:action="@{/home}" th:object="${contact}">
+    <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>CONTACT</span>
+                  <span>US</span>
+                </div>
+                <div class="app-contact"></div>
+              </div>
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                   <label >Name  :  Zensar</label>
+                  </div>
+                  <div class="app-form-group">
+                    <label >Email  :  abcd@gmail.com</label>
+                  </div>
+                  <div class="app-form-group">
+                    <label >ContactNo  :  123456789</label>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+        </div>
+          <!-- <app-footer></app-footer> -->

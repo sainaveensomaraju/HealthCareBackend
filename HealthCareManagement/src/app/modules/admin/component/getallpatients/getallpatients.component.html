@@ -1,0 +1,45 @@
+<div class="text-left">
+    <a class="btn btn-primary" routerLink="../home" >Back</a>
+</div>
+<h3 class="text-center">ALl Patient List</h3>
+<table class="table table-stripped table-bordered table-hovered styling" border="1">
+    <tr>
+        <th>id</th>
+        <th>firstName</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>PhoneNumber</th>
+        <th>Email</th>
+        <th>age</th>
+        <th>Address</th>
+        <th>Date Of Birth</th>
+        <th>password</th>
+        <th>Created date</th>
+    </tr>
+    <tr *ngFor="let d of allPats">
+        <td>{{d.id}}</td>
+        <td><b>{{d.firstName}}</b></td>
+        <td><b>{{d.lastName}}</b></td>
+        <td>{{d.gender}}</td>
+        <td>{{d.phone}}</td>
+        <td>{{d.email}}</td>
+        <td>{{d.age}}</td>
+        <td>{{d.address}}</td>
+        <td>{{d.dob}}</td>
+        <td>{{d.password}}</td>
+        <td>{{d.createdDate}}</td>
+    </tr>
+</table>
+<br>
+<div class="row">
+    <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 col-md-offset-3 col-sm-offset-3 col-lg-offset-3 col-xs-offset-3" >
+        <a class="btn btn-primary" routerLink="../add-patient">Add</a>
+    </div>
+    <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+        <a class="btn btn-primary"  routerLink="../update-pat">Update</a>
+    </div>
+    <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+        <a class="btn btn-danger" routerLink="../deletePat">Delete</a>
+    </div>
+</div>
+<br>

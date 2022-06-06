@@ -1,0 +1,48 @@
+
+<div class="text-left">
+    <a class="btn btn-primary" routerLink="../home" >Back</a>
+</div>
+<h3 class="text-center">All Appointments</h3>
+<hr>
+<table class="table table-stripped table-bordered table-hovered styling" border="1">
+    <tr>
+        <th>Patient Name</th>
+        <th>Doctor Name</th>
+        <th>Lab center Name</th>
+        <th>Reason</th>
+        <th>AdmitDate</th>
+        <th>Admit By</th>
+        <!-- <th>salary</th>
+        <th>age</th>
+        <th>Address</th>
+        <th>Date Of Birth</th>
+        <th>password</th>
+        <th>Created date</th> -->
+    </tr>
+    <tr *ngFor="let d of allAppointments">
+   
+        <td><b>{{d.patientName}}</b></td>
+        <td><b>{{d.doctorName}}</b></td>
+       <td><i>{{d.PatologyCenterName}}</i></td>
+        <td>{{d.admitDate}}</td>
+        <td>{{d.admitBy}}</td>
+        <!-- <td>{{d.email}}</td>
+        <td>{{d.salary}}</td>
+        <td>{{d.age}}</td>
+        <td>{{d.address}}</td>
+        <td>{{d.dob}}</td>
+        <td>{{d.password}}</td>
+        <td>{{d.createdDate}}</td> -->
+    </tr>
+</table>
+<div class="row">
+    <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 col-md-offset-3 col-sm-offset-3 col-lg-offset-3 col-xs-offset-3" >
+        <a class="btn btn-primary" routerLink="../add-doctor">Add</a>
+    </div>
+    <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+        <a class="btn btn-primary"  routerLink="../idByDoctor">Update</a>
+    </div>
+    <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+        <a class="btn btn-danger" routerLink="../deleteDoctor">Delete</a>
+    </div>
+</div>

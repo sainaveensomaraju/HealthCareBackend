@@ -1,0 +1,85 @@
+<app-header></app-header>
+<div class="styling1">
+<div class="row">
+<div >
+    <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4
+    col-lg-4 col-lg-offset-4 col-xs-4 col-xs-offset-4 styling">
+<form class="inline-form" [formGroup]="loginForm">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <div class="text-center">
+                <h1><i><b>Login</b></i></h1>
+            </div>
+        </div>
+    </div>
+    <!--            User Roles       -->
+    <span class="text-center">
+        <span *ngIf="(password && password.touched && password.invalid)|| 
+        (name && name.touched && name.invalid)" style="color: red;"><i>Please Enter all the feilds to login</i></span>
+    </span>
+    <br>
+    <span style="color: red;" *ngIf="chk" class="text-center">Inavlid credentials</span>
+    <br>
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <div class="from-group">
+                <label for="user">Login as</label>&nbsp;&nbsp;
+                <select class="form-control inputstl" formControlName="role">
+                    <option value="1" selected>Admin</option>
+                    <option value="2">Doctor</option>
+                    <option value="3">Lab Assist</option>
+                    <option value="4">Patient</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--       UserName      -->
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <div class="from-group" [ngClass]="{'has-error':name && name.invalid && name.touched}">
+                <label for="userName">Username</label>
+                <input type="text" class="form-control" placeholder="username" minlength="5"
+                    formControlName="userName" required>
+                <small *ngIf="name && name.invalid && name.touched"
+                    style="color: red;"><i>username should be of length 5</i> </small>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--        Password             -->
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <div class="from-group" [ngClass]="{'has-error': password && password.touched && password.invalid }">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="password" formControlName="password"
+                    required>
+                
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--        Submit and reset button      -->
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <button class="btn btn-success" (click)="submit()"
+                [disabled]="loginForm.invalid || (roles && roles.invalid)">Login</button>&nbsp;
+            <button class="btn btn-danger" type="reset">Reset</button>
+        </div>
+    </div>
+    <br>
+ 
+</form>
+
+
+</div>
+</div>
+<br>
+
+</div>
+<br>
+
+<br><br>
+</div>
+<app-footer></app-footer>

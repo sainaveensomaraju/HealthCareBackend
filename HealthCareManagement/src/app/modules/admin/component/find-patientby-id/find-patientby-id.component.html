@@ -1,0 +1,49 @@
+<div class="text-left">
+    <a class="btn btn-primary" routerLink="../home" >Back</a>
+</div>
+<h3 class="text-center">Patient Services</h3>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+        <h3>Enter Id to Find</h3>
+        <input type="text" #num class="form-control"><br>
+        <button (click)="findPatById(num.value)" class="btn btn-primary">FIND</button>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+        <h3>Enter name to Find</h3>
+        <input type="text" #num1 class="form-control"><br>
+        <button (click)="findPatByName(num1.value)" class="btn btn-primary">FIND</button>
+    </div>
+    
+</div>
+<table class="table table-stripped table-bordered table-hovered styling" border="1">
+    <tr>
+        <th>id</th>
+        <th>firstName</th>
+        <th>Last Name</th>
+        <th>Designation</th>
+        <th>Gender</th>
+        <th>PhoneNumber</th>
+        <th>Email</th>
+       
+        <th>age</th>
+        <th>Address</th>
+        <th>Date Of Birth</th>
+        <th>password</th>
+        <th>Created date</th>
+    </tr>
+    <tr *ngIf="chk">
+        <td>{{resPat.id}}</td>
+        <td><b>{{resPat.firstName}}</b></td>
+        <td><b>{{resPat.lastName}}</b></td>
+        <td><i>{{resPat.designation}}</i></td>
+        <td>{{resPat.gender}}</td>
+        <td>{{resPat.phone}}</td>
+        <td>{{resPat.email}}</td>
+  
+        <td>{{resPat.age}}</td>
+        <td>{{resPat.address}}</td>
+        <td>{{resPat.dob}}</td>
+        <td>{{resPat.password}}</td>
+        <td>{{resPat.createdDate}}</td>
+    </tr>
+</table>

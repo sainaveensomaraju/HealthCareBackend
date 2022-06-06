@@ -1,0 +1,79 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="#">Hospital Management</a>
+      </div>
+      <ul class="nav navbar-nav">
+       
+        <li routerLinkActive="active"><a routerLink="./home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li routerLinkActive="active"><a routerLink="./about"> <span class="glyphicon glyphicon-eye-open"></span> About</a></li>
+        <li routerLinkActive="active"><a routerLink="./contact"><span class="glyphicon glyphicon-phone-alt"></span> Contact</a></li>
+
+        <!--Category-->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Patient
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a routerLink="./add-patient">Add</a></li>
+            <li><a routerLink="./deletePat">Delete</a></li>
+            <li> <a routerLink="./idByPat">Find By id</a></li>
+            <li><a routerLink="./all-patient">Get ALL</a></li>
+            <li><a routerLink="./update-pat">Update patient</a></li>
+          </ul>
+        </li>
+        <!--ADVERTISEMENT-->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" >Doctors
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a routerLink="./add-doctor">Add</a></li>
+            <li><a routerLink="./deleteDoctor">Delete</a></li>
+            <li> <a routerLink="./idByDoctor">Find By Id</a></li>
+            <li><a routerLink="./allD">Get ALL</a></li>
+            <li><a routerLink="./update-doctor">Update Doctor</a></li>
+
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Appointment
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a routerLink="./add-apmnt">Add</a></li>
+            <li><a routerLink="./del-apmnt">Delete</a></li>
+            <li> <a routerLink="./update-apmnt">Update Appointment</a></li>
+            <li><a routerLink="./all-apps">Get ALL</a></li>
+            <li><a routerLink="./find-apmnt">Find By Id</a></li>
+            
+
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Pathology
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a routerLink="./add-pathology">Add</a></li>
+            <li><a routerLink="./del-pahtology">Delete</a></li>
+            <li><a routerLink="./get-all-pathologies">Get ALL</a></li>
+            <li><a routerLink="./update-pathology">Update</a></li>
+
+
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a><span class="glyphicon glyphicon-user"></span> {{un}}(Admin)</a></li>    
+        <li class="active"><a (click)="signout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+         
+      
+      
+      </ul>
+    
+    </div>
+  </nav>
+
+

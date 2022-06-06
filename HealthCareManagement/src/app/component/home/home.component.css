@@ -1,0 +1,15 @@
+.styling{
+    padding: 5px;
+    margin:10px;
+    text-align: justify;
+
+}
+.styling2{
+    text-indent: 20px;
+}
+.body{
+    background-image: url("../../../assets/Images/young-handsome-physician-medical-robe-with-stethoscope.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

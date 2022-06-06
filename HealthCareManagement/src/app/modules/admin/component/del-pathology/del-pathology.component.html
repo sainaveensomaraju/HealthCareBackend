@@ -1,0 +1,15 @@
+<div class="text-left">
+    <a class="btn btn-primary" routerLink="../home" >Back</a>
+</div>
+<h3>Id Of Doctor</h3>
+<div class="col-offset-4 col-md-4 col-lg-4 col-sm-4 col-xs-4">
+    <select class="form-control inputstl" #inp>
+        <option value="#" selected>Select Doctor</option>
+        <option *ngFor="let c of allPathologies" value="{{c.id}}">{{c.name}}</option>
+    </select>
+</div>
+
+<button (click)="deletePathology(inp.value)" class="btn btn-danger">Delete</button>
+<hr>
+
+<h1 *ngIf="chk" style="color: green;" class="text-center">One record has been deleted Sucessfully</h1>

@@ -1,0 +1,48 @@
+<div class="text-left">
+    <a class="btn btn-primary" routerLink="../home" >Back</a>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+        <h3>Enter Id to Find</h3>
+        <input type="text" #num class="form-control"><br>
+        <button (click)="findAppById(num.value)" class="btn btn-primary">FIND</button>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+        <h3>Enter name to Find</h3>
+        <input type="text" #num1 class="form-control"><br>
+        <button (click)="findAppByName(num1.value)" class="btn btn-primary">FIND</button>
+    </div>
+    
+</div>
+<hr>
+<table class="table table-stripped table-bordered table-hovered styling" border="1">
+    <tr>
+        <th>Patient Name</th>
+        <th>Doctor Name</th>
+        <th>Lab center Name</th>
+        <th>Reason</th>
+        <th>AdmitDate</th>
+        <th>Admit By</th>
+        <!-- <th>salary</th>
+        <th>age</th>
+        <th>Address</th>
+        <th>Date Of Birth</th>
+        <th>password</th>
+        <th>Created date</th> -->
+    </tr>
+    <tr  *ngIf="chk">
+   
+        <td><b>{{appointment.patientName}}</b></td>
+        <td><b>{{appointment.doctorName}}</b></td>
+       <td><i>{{appointment.PatologyCenterName}}</i></td>
+        <td>{{appointment.admitDate}}</td>
+        <td>{{appointment.admitBy}}</td>
+        <!-- <td>{{d.email}}</td>
+        <td>{{d.salary}}</td>
+        <td>{{d.age}}</td>
+        <td>{{d.address}}</td>
+        <td>{{d.dob}}</td>
+        <td>{{d.password}}</td>
+        <td>{{d.createdDate}}</td> -->
+    </tr>
+</table>

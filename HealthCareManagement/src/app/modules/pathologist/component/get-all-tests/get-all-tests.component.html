@@ -1,0 +1,29 @@
+
+<div class="text-left">
+    <a class="btn btn-primary" routerLink="../home" >Back</a>
+</div>
+<h3 class="text-center">All Tests</h3>
+<hr>
+<table class="table table-stripped table-bordered table-hovered styling" border="1">
+    <tr>
+        <th>id</th>
+        <th>Test Name</th>
+        <th>Test Price</th>
+        <th>Normal Value</th>
+        <th>Unit</th>
+    </tr>
+    <tr *ngFor="let d of allTests">
+        <td>{{d.id}}</td>
+        <td><b>{{d.testName}}</b></td>
+        <td><b>{{d.testPrice}}</b></td>
+       <td><i>{{d.normalValue}}</i></td>
+        <td>{{d.unit}}</td>
+    </tr>
+</table>
+<div class="row">
+    <!-- id:number,
+    testName:string,
+    testPrice:number,
+    normalValue:string,
+    unit:string,
+    availableInCenters:IDiagnoticCenter[] -->

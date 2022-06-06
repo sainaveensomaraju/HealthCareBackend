@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="#">Hospital Management</a>
+      </div>
+      <ul class="nav navbar-nav">
+       
+        <li routerLinkActive="active"><a routerLink="./home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li routerLinkActive="active"><a routerLink="./about"> <span class="glyphicon glyphicon-eye-open"></span> About</a></li>
+        <li routerLinkActive="active"><a routerLink="./contact"><span class="glyphicon glyphicon-phone-alt"></span> Contact</a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" >Services
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a routerLink="./app-satus">Appointment status</a></li>
+            <li> <a routerLink="./pat-list">Patients List</a></li>
+          
+
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" >Test services
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a routerLink="./addtest">Add test</a></li>
+            <li><a routerLink="./all-tests">Get Alll Test</a></li>
+            <li> <a routerLink="./remove-test">Remove Test</a></li>
+            <li> <a routerLink="#">get test by name</a></li>
+          
+
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a><span class="glyphicon glyphicon-user"></span> {{un}}(Lab)</a></li>    
+        <li class="active"><a (click)="signout()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>      </ul>
+    </div>
+  </nav>
+
+
+

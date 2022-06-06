@@ -1,0 +1,37 @@
+<h1 class="text-center"> ALL APPOINTMENTS</h1>
+    
+
+<hr>
+<table class="table table-stripped table-bordered table-hovered styling" border="1">
+    <tr>
+        <th>Patient Name</th>
+        <th>Doctor Name</th>
+        <th>Lab center Name</th>
+        <th>Reason</th>
+        <th>AdmitDate</th>
+        <th>Admit By</th>
+        <th>Status</th>
+    </tr>
+    <tr *ngFor="let d of allAppointments">
+   
+        <td><b>{{d.patientName}}</b></td>
+        <td><b>{{d.doctorName}}</b></td>
+       <td><i>{{d.patologyCenterName}}</i></td>
+       <td>{{d.reason}}</td>
+        <td>{{d.admitDate}}</td>
+        <td>{{d.admitBy}}</td>
+        <td>{{d.status}}</td>
+      
+    </tr>
+</table>
+<div class="row">
+    <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 col-md-offset-3 col-sm-offset-3 col-lg-offset-3 col-xs-offset-3" >
+        <a class="btn btn-primary" routerLink="../add-apmnt">Add</a>
+    </div>
+    <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+        <a class="btn btn-primary"  routerLink="../update-apmnt">Update</a>
+    </div>
+    <div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+        <a class="btn btn-danger" routerLink="../del-apmnt">Delete</a>
+    </div>
+</div>

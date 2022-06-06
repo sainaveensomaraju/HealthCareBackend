@@ -1,0 +1,72 @@
+<div class="text-left">
+    <a class="btn btn-primary" routerLink="../home">Back</a>
+</div>
+<div class="text-center">
+    <div *ngIf="apmntForm.invalid" style="color: red;">Please fillout All the fields</div>
+</div>
+<!-- ================================================================================== -->
+<div class="row">
+    <form class="inline-form" [formGroup]="apmntForm">
+        <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4
+    col-lg-4 col-lg-offset-4 col-xs-4 col-xs-offset-4 styling">
+            <!-- firstname of the customer    -->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-lg-12  col-xs-12">
+                    <div class="from-group" [ngClass]="{'has-error': patId && patId.invalid && patId.touched}">
+                        <label for="patId">Select patient</label>
+                        <select formControlName="categoryId" class="form-control inputstl">
+                            <!-- <option *ngFor="let c of allPatients" value="{{c.id}}" >{{c.userName}}</option> -->
+                          
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--   Lastname of the customer -->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-lg-12  col-xs-12">
+                    <div class="from-group" [ngClass]="{'has-error': docId && docId.invalid && docId.touched}">
+                        <label for="docId">Select Doctor</label>
+                        <select formControlName="docId" class="form-control inputstl">
+                            <option *ngFor="let p of allDoctors" value="{{p.id}}">{{p.lastName}}</option>
+                        </select>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--        designation -->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-lg-12  col-xs-12">
+                    <div class="from-group" [ngClass]="{'has-error': labId && labId.invalid && labId.touched}">
+                        <label for="labId">Select Diagnotic Center</label>
+                        <select formControlName="labId" class="form-control inputstl">
+                            <option *ngFor="let d of allLabs" value="{{d.id}}">{{d.id}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-lg-12  col-xs-12">
+                    <div class="from-group" [ngClass]="{'has-error': reason && reason.invalid && reason.touched}">
+                        <label for="reason">Reason</label>
+                        <input type="text" formControlName="reason" placeholder="Reason" class="form-control" >
+                    </div>
+                </div>
+            </div>
+            
+
+            <!--    Address -->
+            
+
+            <!--   buttons submit and reset -->
+            <br>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-lg-12  col-xs-12">
+                    <button class="btn btn-primary" [disabled]="apmntForm.invalid"
+                        (click)="submit()">Signup</button>&nbsp;
+                    <button class="btn btn-danger" type="reset">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<br><br>
